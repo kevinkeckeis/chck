@@ -1,0 +1,52 @@
+[
+  {
+    "id": "f5c21b8e-b056-43d7-9aa9-6b5be4cefe76",
+    "username": "kex",
+    "email": "kex@mail.com",
+    "password": "123456",
+    "firstName": "Kevin",
+    "lastName": "Keckeis",
+    "createdAt": "2022-06-17T12:42:17.122Z",
+    "updatedAt": "2022-06-17T12:42:17.122Z"
+  },
+  {
+    "id": "bb5f5f64-295c-4283-b635-d62645c91c71",
+    "username": "mariopool",
+    "email": "mario.pool@akiohi.no",
+    "password": "123456",
+    "firstName": "Mario",
+    "lastName": "Pool",
+    "createdAt": "2022-06-17T12:42:17.122Z",
+    "updatedAt": "2022-06-17T12:42:17.122Z"
+  },
+  {
+    "id": "e977b0ec-eb85-4680-8774-abaaaa3b0800",
+    "username": "earlcolombo",
+    "email": "earl.colombo@ifgefru.uz",
+    "password": "123456",
+    "firstName": "Earl",
+    "lastName": "Colombo",
+    "createdAt": "2022-06-17T12:42:17.122Z",
+    "updatedAt": "2022-06-17T12:42:17.122Z"
+  },
+  {
+    "id": "025e167f-0092-446a-91a5-d16b3cd04a3b",
+    "username": "charlesmeijer",
+    "email": "charles.meijer@rebfer.se",
+    "password": "123456",
+    "firstName": "Charles",
+    "lastName": "Meijer",
+    "createdAt": "2022-06-17T12:42:17.122Z",
+    "updatedAt": "2022-06-17T12:42:17.122Z"
+  },
+  {
+    "id": "865e0071-43e5-4410-96d9-ff81a3e78d6a",
+    "username": "juansalerno",
+    "email": "juan.salerno@runkizuz.cl",
+    "password": "123456",
+    "firstName": "Juan",
+    "lastName": "Salerno",
+    "createdAt": "2022-06-17T12:42:17.122Z",
+    "updatedAt": "2022-06-17T12:42:17.122Z"
+  }
+]

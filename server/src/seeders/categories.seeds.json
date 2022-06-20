@@ -1,0 +1,107 @@
+[
+  {
+    "id": "bfc2ddda-0e65-49f6-b1a8-9d7bffb8af1c",
+    "name": "Sport",
+    "UserId": "f5c21b8e-b056-43d7-9aa9-6b5be4cefe76",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "8d5027dd-c38d-4ab0-acd3-396e3090799a",
+    "name": "Kochen",
+    "UserId": "f5c21b8e-b056-43d7-9aa9-6b5be4cefe76",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "980bcc2c-5377-442f-9ec7-d73ecf9d013f",
+    "name": "Wunschlisten",
+    "UserId": "f5c21b8e-b056-43d7-9aa9-6b5be4cefe76",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "074dbd54-df7f-4914-a1dc-b0ee84b5bb05",
+    "name": "nolapi",
+    "UserId": "bb5f5f64-295c-4283-b635-d62645c91c71",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "80f3aa44-0f18-4420-9975-046edf71bee2",
+    "name": "naadesad",
+    "UserId": "bb5f5f64-295c-4283-b635-d62645c91c71",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "7dc01842-02fc-4423-b418-1f961301b41c",
+    "name": "ig",
+    "UserId": "bb5f5f64-295c-4283-b635-d62645c91c71",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "6b93f382-ade2-4ec9-ac1c-676319d9fcc8",
+    "name": "zu",
+    "UserId": "e977b0ec-eb85-4680-8774-abaaaa3b0800",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "b4fe7a49-9618-4e5a-8814-08ff7545a0e9",
+    "name": "mofaga",
+    "UserId": "e977b0ec-eb85-4680-8774-abaaaa3b0800",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "20fc49be-0544-4620-8ef6-2fdad1770ea2",
+    "name": "relrawik",
+    "UserId": "e977b0ec-eb85-4680-8774-abaaaa3b0800",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "7d736104-f244-4c86-9938-770e5ee0dcbc",
+    "name": "ej",
+    "UserId": "025e167f-0092-446a-91a5-d16b3cd04a3b",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "1d0cd7a1-1e5a-44d2-9284-001f0786e214",
+    "name": "wisopwu",
+    "UserId": "025e167f-0092-446a-91a5-d16b3cd04a3b",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "f38b0a13-fbdf-4c69-8c39-1b53239b7fb7",
+    "name": "lid",
+    "UserId": "025e167f-0092-446a-91a5-d16b3cd04a3b",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "f934151d-ce2b-4b72-8ebc-0fa3a22be037",
+    "name": "la",
+    "UserId": "865e0071-43e5-4410-96d9-ff81a3e78d6a",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "14188d3e-cc51-4a8d-8bad-784a0486de0a",
+    "name": "ciddo",
+    "UserId": "865e0071-43e5-4410-96d9-ff81a3e78d6a",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  },
+  {
+    "id": "69ff7f31-fe55-4063-af22-929587f70f0b",
+    "name": "zah",
+    "UserId": "865e0071-43e5-4410-96d9-ff81a3e78d6a",
+    "createdAt": "2022-06-17T12:42:17.133Z",
+    "updatedAt": "2022-06-17T12:42:17.133Z"
+  }
+]
