@@ -1,22 +1,22 @@
-const usersJson = 'src/seeders/users.seeds.json';
-const categoriesJson = 'src/seeders/categories.seeds.json';
-const checklistsJson = 'src/seeders/checklists.json';
-const checklistItemsJson = 'src/seeders/checklistItems.json';
+const usersJson = 'src/utils/seeder/users.json';
+const categoriesJson = 'src/utils/seeder/categories.json';
+const checklistsJson = 'src/utils/seeder/checklists.json';
+const checklistItemsJson = 'src/utils/seeder/checklistItems.json';
 
-const db = require('../models');
+const db = require('../../../src/models');
 const User = db.User;
 const Category = db.Category;
 const Op = db.Sequelize.Op;
 
-const rw = require('./rwFile.util');
-const gen = require('./randomGenerator.util');
+const rw = require('../rwFile.util');
+const gen = require('../randomGenerator.util');
 const { bulkCreate } = require('./sequelize.util');
 
 const seedModel = async (path, generator, quantity, Model) => {
   let models = await rw.readJsonFileAsObject(path);
 
   if (models.length == 0) {
-    models = generator(quantity);
+    models = await generator(quantity);
     rw.saveObjectAsJsonFile(path, models);
   }
   bulkCreate(db, Model, models);

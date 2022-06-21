@@ -1,7 +1,7 @@
-const { sequelize, Sequelize } = require('./src/models');
-const db = require('./src/models');
+const { sequelize, Sequelize } = require('../../../src/models');
+const db = require('../../../src/models');
 const Op = db.Sequelize.Op;
-const { seedServer } = require('./src/utils/seeder.util');
+const { seedServer } = require('./seeder.util');
 
 // sequelize
 //   .authenticate()
@@ -16,9 +16,3 @@ sequelize
   .then(() => {
     seedServer();
   });
-// db.User.findAll({
-//   where: { username: 'lesterpeeters' },
-//   include: db.Category,
-// }).then((data) => {
-//   console.log(data);
-// });

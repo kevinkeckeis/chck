@@ -1,0 +1,52 @@
+[
+    {
+        "id": "91b26d93-2a6c-4ee3-970d-7f154db90567",
+        "username": "janeforconi",
+        "email": "jane.forconi@acu.eu",
+        "password": "$2b$10$wG8IT0aTU.95sGLtHN42v.yUp3jxSeoXIL90zfwW5YZvE8C5mNSUq",
+        "firstName": "Jane",
+        "lastName": "Forconi",
+        "createdAt": "2022-06-21T19:42:42.132Z",
+        "updatedAt": "2022-06-21T19:42:42.132Z"
+    },
+    {
+        "id": "0d420f53-2def-4f4a-89a2-59139c0d8d40",
+        "username": "barrydubois",
+        "email": "barry.dubois@pa.rs",
+        "password": "$2b$10$FqAHTp1LqYd8EZpZtY8j0OmYTtT4/N5kFYjW5V.hmX2t13awaqEtK",
+        "firstName": "Barry",
+        "lastName": "Dubois",
+        "createdAt": "2022-06-21T19:42:42.132Z",
+        "updatedAt": "2022-06-21T19:42:42.132Z"
+    },
+    {
+        "id": "28ee76ea-7a71-48a2-a239-a5137030a84d",
+        "username": "tommyiwasaki",
+        "email": "tommy.iwasaki@ufi.sg",
+        "password": "$2b$10$v7U4T0zGP6ehJsvLPvQ3PucwaDboblcgjGVtbLc1VrLw3TkUUV9ra",
+        "firstName": "Tommy",
+        "lastName": "Iwasaki",
+        "createdAt": "2022-06-21T19:42:42.132Z",
+        "updatedAt": "2022-06-21T19:42:42.132Z"
+    },
+    {
+        "id": "fa8d71de-5b9f-4107-960e-895919c373cc",
+        "username": "derricknistri",
+        "email": "derrick.nistri@ditipuh.tm",
+        "password": "$2b$10$MqZxlaFGDcdLuRQjkPnY9u0kjOMNVmjyE0QR4jtKYxKI6ykAXNWOa",
+        "firstName": "Derrick",
+        "lastName": "Nistri",
+        "createdAt": "2022-06-21T19:42:42.132Z",
+        "updatedAt": "2022-06-21T19:42:42.132Z"
+    },
+    {
+        "id": "2fcbada0-7d31-404e-9e50-9ceb1f2d069c",
+        "username": "beatricehall",
+        "email": "beatrice.hall@pifjesiw.sg",
+        "password": "$2b$10$78n0Cp5VJrK0QLClJCcf9.hzsHu6p95mqZt0eba7lZrTQQki/ZvV.",
+        "firstName": "Beatrice",
+        "lastName": "Hall",
+        "createdAt": "2022-06-21T19:42:42.132Z",
+        "updatedAt": "2022-06-21T19:42:42.132Z"
+    }
+]
