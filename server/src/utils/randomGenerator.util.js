@@ -1,8 +1,9 @@
 const { v4: uuidv4 } = require('uuid');
 const Chance = require('chance');
 const chance = new Chance();
+const bcrypt = require('bcrypt');
 
-const generateUsers = (quantity = 25) => {
+const generateUsers = async (quantity = 25) => {
   const now = new Date().toISOString();
   let users = [];
   for (let i = 0; i < quantity; i++) {
@@ -13,7 +14,7 @@ const generateUsers = (quantity = 25) => {
       id: uuidv4(),
       username: `${firstName.toLowerCase()}${lastName.toLowerCase()}`,
       email: `${firstName.toLowerCase()}.${lastName.toLowerCase()}@${chance.domain()}`,
-      password: '123456',
+      password: await bcrypt.hash('password', 10),
       firstName,
       lastName,
       createdAt: now,
