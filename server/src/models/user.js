@@ -7,6 +7,10 @@ module.exports = (sequelize, DataTypes) => {
     getFullname() {
       return [this.firstName, this.lastName].join(' ');
     }
+    async isValidPassword(password) {
+      const compare = await bcrypt.compare(password, this.password);
+      return compare;
+    }
 
     static associate(models) {
       this.hasMany(models.Category);
