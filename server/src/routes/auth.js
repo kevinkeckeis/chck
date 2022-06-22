@@ -38,7 +38,7 @@ passport.use(
           }
         });
       })
-      .catch((err) => cb(err));
+      .catch((err) => done(err));
   })
 );
 
@@ -47,12 +47,19 @@ passport.use(
   'signup',
   new LocalStrategy(
     {
-      usernameField: 'email',
-      passwordField: 'password',
+      passReqToCallback: true,
+      session: false,
     },
-    async (email, password, done) => {
+    async (req, username, password, done) => {
       try {
-        const user = await User.create({ username: email, email, password });
+        const userbody = ({
+          username,
+          email,
+          password,
+          firstName = '',
+          lastName = '',
+        } = req.body);
+        const user = await User.create(userbody);
         return done(null, user);
       } catch (error) {
         done(error);
@@ -66,7 +73,7 @@ passport.use(
   new JWTstrategy(
     {
       secretOrKey: 'TOP_SECRET',
-      jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret_token'),
+      jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     },
     async (token, done) => {
       try {
@@ -96,14 +103,16 @@ router.post('/login', async (req, res, next) => {
     try {
       if (err || !user) {
         const error = new Error('An error occurred.');
-
         return next(error);
       }
 
       req.login(user, { session: false }, async (error) => {
         if (error) return next(error);
-
-        const body = { _id: user._id, email: user.email };
+        const body = {
+          _id: user._id,
+          username: user.username,
+          email: user.email,
+        };
         const token = jwt.sign({ user: body }, 'TOP_SECRET');
 
         return res.json({ token });
