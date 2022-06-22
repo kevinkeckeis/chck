@@ -18,7 +18,13 @@ exports.findAll = (req, res) => {
 };
 
 exports.create = (req, res) => {
-  const { username, email, password, firstName = '', lastName = '' } = req.body;
+  const user = ({
+    username,
+    email,
+    password,
+    firstName = '',
+    lastName = '',
+  } = req.body);
 
   if (!username || !email || !password) {
     res.status(400).json({
@@ -26,14 +32,6 @@ exports.create = (req, res) => {
     });
     return;
   }
-
-  const user = {
-    username,
-    email,
-    password,
-    firstName,
-    lastName,
-  };
 
   User.create(user)
     .then((data) => {
