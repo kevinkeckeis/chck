@@ -34,10 +34,15 @@ exports.findAllPublic = (req, res) => {
 
 exports.create = (req, res) => {
   const checklist = req.body;
+  checklist.UserId = req.user.id;
   Checklist.create(checklist)
     .then((data) => {
-      const categorieIds = checklist.Categories.map((category) => category.id);
+      if (checklist.Categories) {
+        const categorieIds = checklist.Categories.map(
+          (category) => category.id
+        );
       data.addCategories(categorieIds);
+      }
       res.send(data);
     })
     .catch((err) => {
