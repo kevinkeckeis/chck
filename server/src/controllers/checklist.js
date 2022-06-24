@@ -41,7 +41,7 @@ exports.create = (req, res) => {
         const categorieIds = checklist.Categories.map(
           (category) => category.id
         );
-      data.addCategories(categorieIds);
+        data.addCategories(categorieIds);
       }
       res.send(data);
     })
