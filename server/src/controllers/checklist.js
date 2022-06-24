@@ -5,7 +5,10 @@ const ChecklistItem = db.ChecklistItem;
 const Op = db.Sequelize.Op;
 
 exports.findAll = (req, res) => {
-  Checklist.findAll({ include: [Category, ChecklistItem] })
+  Checklist.findAll({
+    where: { UserId: req.user.id },
+    include: [Category, ChecklistItem],
+  })
     .then((data) => {
       res.send(data);
     })
