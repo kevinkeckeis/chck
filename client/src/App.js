@@ -1,33 +1,30 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Public from './components/Public';
+import Login from './features/auth/Login';
+import Welcome from './features/auth/Welcome';
+import RequireAuth from './features/auth/RequireAuth';
+import CategoriesList from './features/categories/CategoriesList';
 
-import {
-  DashboardContainer,
-  HeaderContainer,
-  LoginContainer,
-} from './containers';
-import Login from './containers/LoginContainer';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
-  const [token, setToken] = useState();
-
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
-
   return (
-    <BrowserRouter>
-      <div className='app'>
-        <HeaderContainer />
-        <main>
-          <Routes>
-            <Route index element={<DashboardContainer />} />
-            <Route path='login' element={<LoginContainer />} />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
+    <CssBaseline enableColorScheme>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          {/* public routes */}
+          <Route index element={<Public />} />
+          <Route path='login' element={<Login />} />
+
+          {/* public routes kevin*/}
+          <Route element={<RequireAuth />}>
+            <Route path='welcome' element={<Welcome />} />
+            <Route path='categories' element={<CategoriesList />} />
+          </Route>
+        </Route>
+      </Routes>
+    </CssBaseline>
   );
 }
 
