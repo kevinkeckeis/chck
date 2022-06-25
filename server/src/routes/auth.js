@@ -98,28 +98,42 @@ router.post(
 );
 
 // Login Route
-router.post('/login', async (req, res, next) => {
-  passport.authenticate('login', async (err, user, info) => {
-    try {
-      if (err || !user) {
-        const error = new Error('An error occurred.');
+router.post('/', async (req, res, next) => {
+  passport.authenticate(
+    'login',
+    { failureMessage: true },
+    async (err, user, info) => {
+      try {
+        // if (!user) {
+        //   const error = new Error('Incorrect username or password.');
+        //   error.Status = 401;
+        //   return next(error);
+        // }
+
+        if (err || !user) {
+          console.log(4, err);
+          const error = new Error('An error occurred.');
+          return next(error);
+        }
+
+        req.login(user, { session: false }, async (error) => {
+          if (error) return next(error);
+          const body = {
+            _id: user._id,
+            id: user.id,
+            username: user.username,
+            email: user.email,
+          };
+          const token = jwt.sign({ user: body }, 'TOP_SECRET', {
+            expiresIn: '10s',
+          });
+
+          return res.json({ token });
+        });
+      } catch (error) {
         return next(error);
       }
-
-      req.login(user, { session: false }, async (error) => {
-        if (error) return next(error);
-        const body = {
-          _id: user._id,
-          username: user.username,
-          email: user.email,
-        };
-        const token = jwt.sign({ user: body }, 'TOP_SECRET');
-
-        return res.json({ token });
-      });
-    } catch (error) {
-      return next(error);
     }
-  })(req, res, next);
+  )(req, res, next);
 });
 module.exports = router;
