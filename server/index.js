@@ -13,28 +13,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const api = require('./src/routes');
 const authRouter = require('./src/routes/auth');
+const corsOptions = require('./src/config/corsOptions');
 
 const app = express();
 
-var allowedOrigins = ['http://localhost:3005'];
-
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      // allow requests with no origin
-      // (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        var msg =
-          'The CORS policy for this site does not ' +
-          'allow access from the specified Origin.';
-        return callback(new Error(msg), false);
-      }
-      return callback(null, true);
-    },
-    credentials: true,
-  })
-);
+app.use(cors(corsOptions));
 
 //Sessions
 const myStore = new SequelizeStore({
@@ -62,8 +45,7 @@ app.use('/auth', authRouter);
 app.use('/api', passport.authenticate('jwt', { session: false }), api);
 
 app.use(function (err, req, res, next) {
-  res.status(err.status || 500);
-  res.json({ error: err });
+  res.status(err.status || 500).json({ error: err });
 });
 
 app.listen(PORT, () => {
